@@ -13,10 +13,10 @@ class RegisterType extends AbstractType
     {
         $builder
             ->add('firstname')
-            ->add('lastname'
+            ->add('lastname')
             ->add('email')
             ->add('password')
-         )
+
         ;
     }
 
