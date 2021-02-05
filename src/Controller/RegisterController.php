@@ -24,6 +24,7 @@ class RegisterController extends AbstractController
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $user = $form->getData();
+            dd($user);
         }
 
         return $this->render('register/index.html.twig', [
