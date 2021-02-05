@@ -15,7 +15,7 @@ class RegisterController extends AbstractController
     public function index(): Response
     {
      $user = new User();
-
+        $form = $this->createForm(RegisterType::class, $user);
 
 
         return $this->render('register/index.html.twig', [
