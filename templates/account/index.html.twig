@@ -5,7 +5,7 @@
 {% block content %}
     <h1> Espace Personnel </h1>
     <h1>Mon compte ✅</h1>
-    Bienvenue ... sur votre compte.<br>
-    {{ dump(app.user) }}
+    Bienvenue {{ dump(app.user.lastname) }} sur votre compte.<br>
+
     Votre espace utilisateur personnalisé.<br>
 {% endblock %}
