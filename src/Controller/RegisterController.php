@@ -43,7 +43,7 @@ class RegisterController extends AbstractController
 
 
 
-            $password = $user->getPassword();
+            $password = $encoder->encodePassword($user,$user->getPassword());
             dd($password);
 
             $this->entityManager->persist($user);
