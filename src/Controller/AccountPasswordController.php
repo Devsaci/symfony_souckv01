@@ -29,7 +29,7 @@ class AccountPasswordController extends AbstractController
 
             if ($encoder->isPasswordValid($user, $old_pwd)) {
                 $new_pwd = $form->get('new_password')->getData();
-
+                $password = $encoder->encodePassword($user, $new_pwd);
 
             }
 
