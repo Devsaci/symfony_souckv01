@@ -13,6 +13,10 @@ class AccountPasswordController extends AbstractController
      */
     public function index(): Response
     {
+
+        $form = $this->createForm(ChangePasswordType::class, $user);
+
+
         return $this->render('account/password.html.twig', [
 
         ]);
