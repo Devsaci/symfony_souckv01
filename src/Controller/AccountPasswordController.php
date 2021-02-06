@@ -7,6 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class AccountPasswordController extends AbstractController
 {
@@ -15,7 +16,7 @@ class AccountPasswordController extends AbstractController
      * @param Request $request
      * @return Response
      */
-    public function index(Request $request): Response
+    public function index(Request $request ,UserPasswordEncoderInterface $encoder): Response
     {
         $user = $this->getUser();
         $form = $this->createForm(ChangePasswordType::class, $user);
