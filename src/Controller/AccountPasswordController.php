@@ -14,6 +14,7 @@ class AccountPasswordController extends AbstractController
     /**
      * @Route("/compte/modifier-mon-mot-de-passe", name="account_password")
      * @param Request $request
+     * @param UserPasswordEncoderInterface $encoder
      * @return Response
      */
     public function index(Request $request ,UserPasswordEncoderInterface $encoder): Response
@@ -24,6 +25,12 @@ class AccountPasswordController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            if ($encoder->isPasswordValid($user, $old_pwd)) {
+
+            }
+
+
 
         }
 
