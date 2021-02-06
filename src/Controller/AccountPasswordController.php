@@ -26,9 +26,11 @@ class AccountPasswordController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $old_pwd = $form->get('old_password')->getData();
-//            dd($old_pwd);
+
             if ($encoder->isPasswordValid($user, $old_pwd)) {
-                die('Ca marche');
+                $new_pwd = $form->get('new_password')->getData();
+
+
             }
 
 
