@@ -25,7 +25,7 @@ class AccountPasswordController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-
+            $old_pwd = $form->get('old_password')->getData();
             if ($encoder->isPasswordValid($user, $old_pwd)) {
 
             }
