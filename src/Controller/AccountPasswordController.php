@@ -13,7 +13,7 @@ class AccountPasswordController extends AbstractController
      */
     public function index(): Response
     {
-
+        $user = $this->getUser();
         $form = $this->createForm(ChangePasswordType::class, $user);
 
 
