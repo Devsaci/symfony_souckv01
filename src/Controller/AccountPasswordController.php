@@ -22,6 +22,9 @@ class AccountPasswordController extends AbstractController
 
         $form->handleRequest($request);
 
+        if ($form->isSubmitted() && $form->isValid()) {
+
+        }
 
         return $this->render('account/password.html.twig', [
                 'form' => $form->createView(),
