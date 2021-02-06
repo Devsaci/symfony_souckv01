@@ -43,6 +43,12 @@
                 </li>
                 <li class="nav-item">
             </ul>
+            {% if app.user %}
+                <a href="#">Mon compte </a> | <a href="#">Déconnexion</a>
+            {% else %}
+                <a href="#">Connexion</a> | <a href="#">Inscription</a>
+            {% endif %}
+
             <a href="#">Connexion</a> | <a href="#">Inscription</a>
         </div>
     </nav>
