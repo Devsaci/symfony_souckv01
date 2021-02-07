@@ -3,14 +3,15 @@
 {% block title %}Nos Produits{% endblock %}
 
 {% block content %}
+    <h3>Nos produits</h3>
     <div class="row">
-        <div class="col-md-9">
-            <h3>Nos produits</h3>
-        </div>
 
-        {% for product in products %}
-        {{  dump(product) }}
-        {% endfor %}
+
+            {% for product in products %}
+        <div class="col-md-3">
+                {{  dump(product) }}
+        </div>
+            {% endfor %}
 
 
     </div>
