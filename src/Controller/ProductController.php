@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Product;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -29,6 +30,8 @@ class ProductController extends AbstractController
 
 
 
+        $products = $this->entityManager->getRepository(Product::class)->findAll();
+dd($products);
         return $this->render('product/index.html.twig', [
             'products' => $products
         ]);
