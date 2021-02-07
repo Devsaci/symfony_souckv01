@@ -3,7 +3,10 @@
 {% block title %}{{ product.name }} {% endblock %}
 
 {% block content %}
+<div class="row">
+    <div class="col-md-5">
+        <img src="/uploads/{{ product.illustration }}" alt="{{ product.name }}" class="img-fluid">
+    </div>
+</div>
 
-            <h3>{{ product.name }}</h3>
-    {{ dump (product) }}
 {% endblock %}
