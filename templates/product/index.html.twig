@@ -7,6 +7,12 @@
         <div class="col-md-9">
             <h3>Nos produits</h3>
         </div>
+
+        {% for product in products %}
+        {{  dump(product) }}
+        {% endfor %}
+
+
     </div>
 {% endblock %}
 
