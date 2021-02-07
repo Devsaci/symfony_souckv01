@@ -8,13 +8,25 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class ProductController extends AbstractController
 {
+    private $entityManager;
+
+
+
+
+
+
+
+
     /**
      * @Route("/nos-product", name="products")
      */
     public function index(): Response
     {
-        return $this->render('product/index.html.twig', [
 
+
+
+        return $this->render('product/index.html.twig', [
+            'products' => $products
         ]);
     }
 }
