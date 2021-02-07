@@ -10,11 +10,14 @@ class ProductController extends AbstractController
 {
     private $entityManager;
 
-
-
-
-
-
+    /**
+     * ProductController constructor.
+     * @param $entityManager
+     */
+    public function __construct( $entityManager)
+    {
+        $this->entityManager = $entityManager;
+    }
 
 
     /**
