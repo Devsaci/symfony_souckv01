@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ product.name }} {% endblock %}
+
+{% block content %}
+
+            <h3>{{ product.name }}</h3>
+    {{ dump (product) }}
+{% endblock %}
