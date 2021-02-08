@@ -3,7 +3,9 @@
 namespace App\Form;
 
 
-class SearchType
+use Symfony\Component\Form\AbstractType;
+
+class SearchType extends AbstractType
 {
 
 
