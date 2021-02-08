@@ -12,15 +12,22 @@ class SearchType extends AbstractType
 {
 
 
+    /**
+     * @param FormBuilderInterface $builder
+     * @param array $options
+     */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+
+
+
     }
 
 
-
-
-
-        public function configureOptions(OptionsResolver $resolver)
+    /**
+     * @param OptionsResolver $resolver
+     */
+    public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
             'data_class' => Search::class,
@@ -30,7 +37,10 @@ class SearchType extends AbstractType
         ]);
     }
 
-    public function getBlockPrefix()
+    /**
+     * @return string
+     */
+    public function getBlockPrefix(): string
     {
         return '';
     }
