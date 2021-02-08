@@ -37,7 +37,8 @@ class ProductController extends AbstractController
         $form = $this->createForm(SearchType::class, $search);
 
         return $this->render('product/index.html.twig', [
-            'products' => $products
+            'products' => $products,
+            'form' => $form->createView()
         ]);
     }
 
