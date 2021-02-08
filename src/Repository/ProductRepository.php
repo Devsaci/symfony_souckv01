@@ -45,7 +45,7 @@ class ProductRepository extends ServiceEntityRepository
                 ->setParameter('string', "%{$search->string}%");
         }
 
-
+        return $query->getQuery()->getResult();
     }
 
 
