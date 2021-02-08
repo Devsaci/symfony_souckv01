@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Classe\Search;
 use App\Entity\Product;
 use App\Form\SearchType;
 use Doctrine\ORM\EntityManagerInterface;
@@ -32,6 +33,7 @@ class ProductController extends AbstractController
       $products = $this->entityManager->getRepository(Product::class)->findAll();
 
 
+        $search =new Search();
         $form = $this->createForm(SearchType::class, $search);
 
         return $this->render('product/index.html.twig', [
