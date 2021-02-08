@@ -34,6 +34,13 @@ class ProductRepository extends ServiceEntityRepository
             ->select('c', 'p')
             ->join('p.category', 'c');
 
+        if (!empty($search->categories)) {
+            $query = $query
+                ->andWhere('c.id IN (:categories)')
+                ->setParameter('categories', $search->categories);
+        }
+
+
     }
 
 
