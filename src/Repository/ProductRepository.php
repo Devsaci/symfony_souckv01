@@ -29,6 +29,10 @@ class ProductRepository extends ServiceEntityRepository
      */
     public function findWithSearch(Search $search)
     {
+        $query = $this
+            ->createQueryBuilder('p')
+            ->select('c', 'p')
+            ->join('p.category', 'c');
 
     }
 
