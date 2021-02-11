@@ -34,6 +34,7 @@ class RegisterController extends AbstractController
      */
     public function index(Request $request,UserPasswordEncoderInterface $encoder ): Response
     {
+
         $user = new User();
         $form = $this->createForm(RegisterType::class, $user);
 
@@ -51,10 +52,23 @@ class RegisterController extends AbstractController
             $this->entityManager->flush();
 
 
+
+//            $this->addFlash(
+//                'notice',
+//                'Your changes were saved!'
+//            );
+
+
+            return $this->redirectToRoute('account');
+
         }
+
+
+
 
         return $this->render('register/index.html.twig', [
             'form' => $form->createView()
+
         ]);
     }
 }
