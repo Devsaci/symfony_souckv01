@@ -51,14 +51,10 @@ class RegisterController extends AbstractController
             $this->entityManager->persist($user);
             $this->entityManager->flush();
 
-
-
-//            $this->addFlash(
-//                'notice',
-//                'Your changes were saved!'
-//            );
-
-
+            $this->addFlash(
+                'notice',
+                'Your changes were saved!'
+            );
             return $this->redirectToRoute('account');
 
         }
