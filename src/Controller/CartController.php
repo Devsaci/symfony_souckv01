@@ -28,8 +28,8 @@ dd($cart->get());
      */
     public function add(Cart $cart , $id)
     {
-       $cart->add($id);
+        $cart->add($id);
 
-        return $this->render('cart/index.html.twig');
+        return $this->redirectToRoute('cart');
     }
 }
