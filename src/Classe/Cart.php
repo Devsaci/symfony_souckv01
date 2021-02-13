@@ -17,6 +17,13 @@ class Cart
     public function add($id)
     {
 
+        $this->session->set('cart', [
+        [
+            'id' => $id,
+            'quantity' => 1
+        ]
+        ]);
+
     }
 
 
