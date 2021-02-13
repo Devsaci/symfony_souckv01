@@ -32,4 +32,23 @@ dd($cart->get());
 
         return $this->redirectToRoute('cart');
     }
+
+    /**
+     * @Route("/cart/remove", name="remove-my-cart")
+     * @param Cart $cart
+     * @param $id
+     */
+    public function remove(Cart $cart)
+    {
+        $cart->remove();
+
+        return $this->redirectToRoute('products');
+    }
+
+
+
+
+
+
+
 }
