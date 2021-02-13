@@ -23,7 +23,7 @@ class CartController extends AbstractController
      */
     public function add($id): Response
     {
-        dd($id);
+       $cart->add($id);
 
         return $this->render('cart/index.html.twig', [
 
