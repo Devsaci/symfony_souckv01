@@ -26,5 +26,12 @@ class Cart
 
     }
 
+    public function get()
+    {
+        return $this->session->get('cart');
+    }
+
+
+
 
 }

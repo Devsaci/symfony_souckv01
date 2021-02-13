@@ -12,8 +12,10 @@ class CartController extends AbstractController
     /**
      * @Route("/mon-panier", name="cart")
      */
-    public function index(): Response
+    public function index(Cart $cart)
     {
+dd($cart->get());
+
         return $this->render('cart/index.html.twig', [
 
         ]);
@@ -23,9 +25,8 @@ class CartController extends AbstractController
      * @Route("/cart/add/{id}", name="add-to-cart")
      * @param Cart $cart
      * @param $id
-     * @return Response
      */
-    public function add(Cart $cart , $id): Response
+    public function add(Cart $cart , $id)
     {
        $cart->add($id);
 
