@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Classe\Cart;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -20,13 +21,14 @@ class CartController extends AbstractController
 
     /**
      * @Route("/cart/add/{id}", name="add-to-cart")
+     * @param Cart $cart
+     * @param $id
+     * @return Response
      */
-    public function add($id): Response
+    public function add(Cart $cart , $id): Response
     {
        $cart->add($id);
 
-        return $this->render('cart/index.html.twig', [
-
-        ]);
+        return $this->render('cart/index.html.twig');
     }
 }
