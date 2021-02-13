@@ -17,4 +17,14 @@ class CartController extends AbstractController
 
         ]);
     }
+
+    /**
+     * @Route("/cart/add/{id}", name="add-to-cart")
+     */
+    public function add(): Response
+    {
+        return $this->render('cart/index.html.twig', [
+
+        ]);
+    }
 }
