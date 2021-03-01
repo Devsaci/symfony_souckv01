@@ -23,9 +23,9 @@
             {{ dump(product) }}
         <tr>
             <th>{{ product.product.name }}</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <td>{{ product.quantity }}</td>
+            <td>{{ (product.product.price / 100)|number_format(2, ',', '.') }} €</td>
+            <td>{{ ((product.product.price * product.quantity ) / 100)|number_format(2, ',', '.') }} €</td>
         </tr>
         {% endfor %}
         </tbody>
