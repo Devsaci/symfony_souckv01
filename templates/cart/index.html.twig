@@ -8,4 +8,28 @@
     Retrouvez l'ensemble des produits que vous avez ajouté à votre panier.
                 {{ dump(cart) }}
 
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Produit</th>
+            <th scope="col">Quantité</th>
+            <th scope="col">Prix</th>
+            <th scope="col">Total</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for product in cart %}
+        <tr>
+            <th>1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+
+    </table>
+
+
 {% endblock %}
