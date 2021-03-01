@@ -33,9 +33,9 @@ class CartController extends AbstractController
         'quantity' => $quantity
                                 ];
         }
-dd($cartComplete);
+//dd($cartComplete);
         return $this->render('cart/index.html.twig', [
-            'cart' => $cart->get()
+            'cart' =>   $cartComplete
         ]);
     }
 
