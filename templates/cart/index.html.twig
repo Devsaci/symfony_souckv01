@@ -22,7 +22,7 @@
         {% for product in cart %}
             {{ dump(product) }}
         <tr>
-            <th>1</th>
+            <th>{{ product.product.name }}</th>
             <td>Mark</td>
             <td>Otto</td>
             <td>@mdo</td>
