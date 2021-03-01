@@ -45,7 +45,7 @@ class User implements UserInterface
      *     message="Your name cannot contain a number"
      * )
      *  @Assert\Length(
-     *      min = 5,
+     *      min = 3,
      *      max = 50,
      *      minMessage = "Your first name must be at least {{ limit }} characters long",
      *      maxMessage = "Your first name cannot be longer than {{ limit }} characters"

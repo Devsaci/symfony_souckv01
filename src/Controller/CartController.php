@@ -14,10 +14,10 @@ class CartController extends AbstractController
      */
     public function index(Cart $cart)
     {
-dd($cart->get());
+//dd($cart->get());
 
         return $this->render('cart/index.html.twig', [
-
+            'cart' => $cart->get()
         ]);
     }
 
